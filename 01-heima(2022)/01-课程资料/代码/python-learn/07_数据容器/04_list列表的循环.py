@@ -18,7 +18,7 @@ def list_while_func():
     while index < len(mylist):
         # 通过index变量取出对应下标的元素
         element = mylist[index]
-        print(f"列表的元素：{element}")
+        print(f"列表的元素-第一种方法：{element}")
 
         # 至关重要：将循环变量（index）每一次循环都+1
         index += 1
