@@ -29,10 +29,10 @@ print("-----------------------------------------------")
 #     print(f"每一行数据是:{line}")
 # # 文件的关闭
 # f.close()
-# time.sleep(500000)
-# with open 语法操作文件
-with open("D:/测试.txt", "r", encoding="UTF-8") as f:
-    for line in f:
-        print(f"每一行数据是：{line}")
+# time.sleep(500000)    //让程序执行到这里时，让它睡眠(但没有停止，此时会一直占用文件)
+# with open 语法操作文件(这里的with叫上下文管理器)
+# with open("D:/测试.txt", "r", encoding="UTF-8") as f:
+#     for line in f:
+#         print(f"每一行数据是：{line}")
 
 time.sleep(500000)
