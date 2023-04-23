@@ -16,6 +16,7 @@
 # except NameError as e:
 #     print("出现了变量未定义的异常")
 #     print(e)
+
 # 捕获多个异常
 # try:
 #     # 1 / 0

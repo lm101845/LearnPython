@@ -4,6 +4,8 @@ https://www.bilibili.com/video/BV1qW4y1a7fU?p=1
 
 课程时长31.5小时，共164集。
 
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple
+
 第1-20集看完——22-12-08
 第21-25集看完——23-03-23
 第26-30集看完——23-04-09
@@ -11,3 +13,4 @@ https://www.bilibili.com/video/BV1qW4y1a7fU?p=1
 第45-64集看完——23-04-13
 第65-84集看完——23-04-14
 第85-90集看完——23-04-18
+第91-100集看完——23-04-23
