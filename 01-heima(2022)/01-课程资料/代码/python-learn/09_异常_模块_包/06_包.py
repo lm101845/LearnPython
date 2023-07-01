@@ -21,6 +21,6 @@
 # info_print2()
 
 # 通过__all__变量，控制import *
-# from my_package import *
-# my_module1.info_print1()
-# my_module2.info_print2()
+from my_package import *
+my_module1.info_print1()
+my_module2.info_print2()

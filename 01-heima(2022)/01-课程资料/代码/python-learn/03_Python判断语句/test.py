@@ -1,17 +1,20 @@
 
-
-money = 10000
-for i in range(1, 21):
-    import random
-    score = random.randint(1, 10)
-    if score < 5:
-        print(f"员工{i}，绩效分{score}，低于5，不发工资，下一位。")
-        continue
-    else:
-        money -= 1000
-        print(f"向员工{i}发放工资1000元，账户余额还剩余{money}元")
-        if money == 0:
-            print("工资发完了，下个月领取吧。")
-            break
-
+from pymysql import Connection
+# 获取到MySQL数据库的链接对象
+conn = Connection(
+    host='localhost',   # 主机名（或IP地址）
+    port=3306,          # 端口，默认3306
+    user='root',        # 账户名
+    password='123456'   # 密码
+)
+# 获取游标对象
+cursor = conn.cursor()
+conn.select_db("test")      # 先选择数据库
+# 使用游标对象，执行sql语句
+cursor.execute("SELECT * FROM student")
+# 获取查询结果的第一条
+result: tuple = cursor.fetchone()
+print(result)
+# 关闭到数据库的链接
+conn.close()
 

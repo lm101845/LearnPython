@@ -6,7 +6,7 @@ import json
 data = [{"name": "张大山", "age": 11}, {"name": "王大锤", "age": 13}, {"name": "赵小虎", "age": 16}]
 json_str = json.dumps(data, ensure_ascii=False)
 print(type(json_str))
-print("json_str--", json_str)
+print(json_str)
 # 准备字典，将字典转换为JSON
 d = {"name":"周杰轮", "addr":"台北"}
 json_str = json.dumps(d, ensure_ascii=False)

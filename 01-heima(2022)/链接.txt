@@ -1,8 +1,12 @@
+视频链接：
 https://www.bilibili.com/video/BV1qW4y1a7fU?p=1
 
-这个课程比较基础，老师讲的很详细，非常小白，而且很新，我2倍速快速过一遍，代码就不一一敲了。
+这个课程比较基础，老师讲的很详细，非常小白，而且很新，我2倍速快速过一遍，代码就不一一敲了，重要的敲一敲
 
 课程时长31.5小时，共164集。
+
+课程资料：
+https://pan.baidu.com/s/1KCKkV13ymltq9CMXE3qxJA&pwd=1234
 
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple
 
@@ -14,3 +18,5 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple
 第65-84集看完——23-04-14
 第85-90集看完——23-04-18
 第91-100集看完——23-04-23
+第101-110集看完——23-05-02
+第111-120集看完——23-07-01

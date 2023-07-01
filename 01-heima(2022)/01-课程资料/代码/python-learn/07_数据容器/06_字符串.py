@@ -1,22 +1,19 @@
 """
 演示以数据容器的角色，学习字符串的相关操作
 """
-
-# 同元祖一样，字符串是一个不可修改的数据容器
 my_str = "itheima and itcast"
 # 通过下标索引取值
 value = my_str[2]
 value2 = my_str[-16]
 print(f"从字符串{my_str}取下标为2的元素，。值是：{value},取下标为-16的元素。值是：{value2}")
 
-# my_str[2] = "H"   //字符串不支持修改
+# my_str[2] = "H"
 
 # index方法
 value = my_str.index("and")
 print(f"在字符串{my_str}中查找and，其起始下标是：{value}")
 
 # replace方法
-# 不是修改字符串本身，而是得到了一个新字符串
 new_my_str = my_str.replace("it", "程序")
 print(f"将字符串{my_str}，进行替换后得到：{new_my_str}")
 

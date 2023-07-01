@@ -1,50 +1,30 @@
-# coding:utf8
-from pyecharts.charts import Bar, Timeline
-from pyecharts.globals import ThemeType
-from pyecharts.options import *
+import random
+import uuid
 
-f = open("D:/1960-2019全球GDP数据.csv", "r", encoding="GB2312")
-lines = f.readlines()       # 读取全部数据行
-lines.pop(0)                # 删除第一行
-# 构建字典存数据，格式{年份:[["美国", 123], ["中国", 123], ......], 年份：[[], []], ......}
-data_dict = {}
-for line in lines:
-    year = int(line.split(",")[0])
-    country = line.split(",")[1]
-    gdp = float(line.split(",")[2])
-    try:
-        data_dict[year].append((country, gdp))
-    except KeyError:
-        data_dict[year] = []
-        data_dict[year].append((country, gdp))
+# dates = ["2011-01-01", "2011-01-02", "2011-01-03", "2011-01-04", "2011-01-05", "2011-01-06", "2011-01-07", "2011-01-08"
+#          , "2011-01-09", "2011-01-10", "2011-01-11", "2011-01-12", "2011-01-13", "2011-01-14", "2011-01-15", "2011-01-16"
+#          , "2011-01-17", "2011-01-18", "2011-01-19", "2011-01-20", "2011-01-21", "2011-01-22", "2011-01-23", "2011-01-24"
+#          , "2011-01-25", "2011-01-26", "2011-01-27", "2011-01-28", "2011-01-29", "2011-01-30", "2011-01-31"]
+dates = ["2011-02-01", "2011-02-02", "2011-02-03", "2011-02-04", "2011-02-05", "2011-02-06", "2011-02-07", "2011-02-08"
+         , "2011-02-09", "2011-02-10", "2011-02-11", "2011-02-12", "2011-02-13", "2011-02-14", "2011-02-15", "2011-02-16"
+         , "2011-02-17", "2011-02-18", "2011-02-19", "2011-02-20", "2011-02-21", "2011-02-22", "2011-02-23", "2011-02-24"
+         , "2011-02-25", "2011-02-26", "2011-02-27", "2011-02-28"]
 
-sorted_year_list = sorted(data_dict.keys())         # 排序年份，从1960年开始
-timeline = Timeline({"theme": ThemeType.LIGHT})     # 创建时间线，并设置主题
-for year in sorted_year_list:                       # for循环，从1960年开始
-    data_dict[year].sort(key=lambda element: element[1], reverse=True)
-    year_data = data_dict[year][0:8]
-    countrys = []
-    gdps = []
-    for country_gdp in year_data:
-        countrys.append(country_gdp[0])
-        gdps.append(int(country_gdp[1] / 100000000))
-    bar = Bar()             # 创建柱状图
-    countrys.reverse()      # 反转国家，让GDP最高的排在最上面
-    gdps.reverse()          # 同步反转GDP数据
-    # 设置标题
-    bar.set_global_opts(title_opts=TitleOpts(title=f"{year}年全球前8 GDP国家"))
-    bar.add_xaxis(countrys)             # 添加x轴数据
-    bar.add_yaxis("GDP(亿)", gdps, label_opts=LabelOpts(position="right"))   # y轴数据，标签在右
-    bar.reversal_axis()                 # 反转x和y轴
-    timeline.add(bar, str(year))        # 时间线添加一个点，和对应的bar柱状图
+provinces = ["安徽省", "河南省", "江苏省", "福建省", "广东省", "广西省", "湖北省", "湖南省", "山东省", "山西省", "河北省",
+             "陕西省", "浙江省", "贵州省", "云南省", "四川省", "辽宁省", "江西省"]
 
-# 设置自动播放
-timeline.add_schema(
-    play_interval=500,
-    is_timeline_show=True,
-    is_auto_play=True,
-    is_loop_play=False
-)
-timeline.render("1960-2019全球GDP前8国家.html")       # 绘图
+f = open("C:\\Users\\caoyu\\Desktop\\2011年2月销售数据JSON.txt", "w", encoding="UTF-8")
+for d in dates:
+    base_num = random.randint(30, 36)
+    if d == '2011-02-02' or d == '2011-02-03':
+        base_num = random.randint(60, 66)
+    for i in range(base_num):
+        oid = str(uuid.uuid4())
+        money = random.randint(100, 3000)
+        province = provinces[random.randint(0, len(provinces) - 1)]
+        msg = '{"date": "%s", "order_id": "%s", "money": %d, "province": "%s"}' % (d, oid, money, province)
+        f.write(msg)
+        f.write("\n")
+
 f.close()
 

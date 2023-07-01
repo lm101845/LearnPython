@@ -12,4 +12,4 @@ def check(num):
         print(f"体温测量中，您的体温是：{num}度，需要隔离！")
 
 # 调用函数，传入实际参数
-check(37.2)
+check(37.6)
