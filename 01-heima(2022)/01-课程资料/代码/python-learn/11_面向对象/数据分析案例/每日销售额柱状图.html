@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Awesome-pyecharts</title>
-            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+                <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
 
 </head>
-<body>
-    <div id="1e68a870e6554c81b3c50ba57c7eceac" class="chart-container" style="width:900px; height:500px;"></div>
+<body >
+    <div id="282f2992048f408d82c858f813fd92e2" class="chart-container" style="width:900px; height:500px; "></div>
     <script>
-        var chart_1e68a870e6554c81b3c50ba57c7eceac = echarts.init(
-            document.getElementById('1e68a870e6554c81b3c50ba57c7eceac'), 'light', {renderer: 'canvas'});
-        var option_1e68a870e6554c81b3c50ba57c7eceac = {
+        var chart_282f2992048f408d82c858f813fd92e2 = echarts.init(
+            document.getElementById('282f2992048f408d82c858f813fd92e2'), 'light', {renderer: 'canvas'});
+        var option_282f2992048f408d82c858f813fd92e2 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -20,6 +20,9 @@
     "animationDurationUpdate": 300,
     "animationEasingUpdate": "cubicOut",
     "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
     "series": [
         {
             "type": "bar",
@@ -86,7 +89,10 @@
                 51796,
                 48385
             ],
+            "realtimeSort": false,
             "showBackground": false,
+            "stackStrategy": "samesign",
+            "cursor": "pointer",
             "barMinHeight": 0,
             "barCategoryGap": "20%",
             "barGap": "30%",
@@ -99,7 +105,6 @@
             "z": 2,
             "label": {
                 "show": false,
-                "position": "top",
                 "margin": 8
             }
         }
@@ -109,14 +114,27 @@
             "data": [
                 "\u9500\u552e\u989d"
             ],
-            "selected": {
-                "\u9500\u552e\u989d": true
-            },
+            "selected": {},
             "show": true,
             "padding": 5,
             "itemGap": 10,
             "itemWidth": 25,
-            "itemHeight": 14
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderWidth": 1,
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
         }
     ],
     "tooltip": {
@@ -130,11 +148,16 @@
         "alwaysShowContent": false,
         "showDelay": 0,
         "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
         "textStyle": {
             "fontSize": 14
         },
         "borderWidth": 0,
-        "padding": 5
+        "padding": 5,
+        "order": "seriesAsc"
     },
     "xAxis": [
         {
@@ -148,7 +171,7 @@
             "splitNumber": 5,
             "minInterval": 0,
             "splitLine": {
-                "show": false,
+                "show": true,
                 "lineStyle": {
                     "show": true,
                     "width": 1,
@@ -232,7 +255,7 @@
             "splitNumber": 5,
             "minInterval": 0,
             "splitLine": {
-                "show": false,
+                "show": true,
                 "lineStyle": {
                     "show": true,
                     "width": 1,
@@ -245,13 +268,19 @@
     ],
     "title": [
         {
+            "show": true,
             "text": "\u6bcf\u65e5\u9500\u552e\u989d",
+            "target": "blank",
+            "subtarget": "blank",
             "padding": 5,
-            "itemGap": 10
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
         }
     ]
 };
-        chart_1e68a870e6554c81b3c50ba57c7eceac.setOption(option_1e68a870e6554c81b3c50ba57c7eceac);
+        chart_282f2992048f408d82c858f813fd92e2.setOption(option_282f2992048f408d82c858f813fd92e2);
     </script>
 </body>
 </html>
