@@ -12,12 +12,13 @@ conn = Connection(
     autocommit=True     # 设置自动提交
 )
 
-# print(conn.get_server_info())
+print(conn.get_server_info())
 # 执行非查询性质SQL
 cursor = conn.cursor()      # 获取到游标对象
-# 选择数据库
-conn.select_db("world")
-# 执行sql
+# # 选择数据库
+conn.select_db("test")
+# # 执行sql
+# cursor.execute("create table test_pymysql(id int)")
 cursor.execute("insert into student values(10001, '周杰轮', 31, '男')")
 # 关闭链接
 conn.close()

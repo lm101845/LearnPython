@@ -16,9 +16,9 @@ conn = Connection(
 # 执行非查询性质SQL
 cursor = conn.cursor()      # 获取到游标对象
 # 选择数据库
-conn.select_db("world")
+conn.select_db("test")
 # 执行sql
-cursor.execute("insert into student values(10002, '林俊节', 31, '男')")
+# cursor.execute("insert into order values(3, 'cc', '2023-07-07')")
 # # 通过commit确认
 # conn.commit()
 # 关闭链接

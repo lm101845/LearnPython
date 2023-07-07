@@ -13,9 +13,9 @@ conn = Connection(
 # 获得游标对象
 cursor = conn.cursor()
 # 选择数据库
-conn.select_db("py_sql")
+conn.select_db("test")
 # 查询
-cursor.execute("SELECT * FROM orders")
+cursor.execute("SELECT * FROM pysql")
 result = cursor.fetchall()
 for r in result:
     record = Record(r[0], r[1], r[2], r[3])
