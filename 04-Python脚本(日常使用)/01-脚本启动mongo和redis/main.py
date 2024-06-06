@@ -1,7 +1,6 @@
 import subprocess
 import time
 
-
 def start_mongodb():
     mongod_path = "D:\\sortware\\42-mogodb\\content\\bin\\mongod.exe"  # MongoDB可执行文件路径
     data_path = "D:\\sortware\\42-mogodb\\content\\data\\db"  # MongoDB数据路径
